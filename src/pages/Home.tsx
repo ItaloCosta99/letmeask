@@ -3,7 +3,7 @@ import { FormEvent, useState } from 'react';
 
 import illustrationImg from '../assets/images/illustration.svg';
 import logoImg from '../assets/images/logo.svg';
-import googleIconImg  from '../assets/images/google-icon.svg';
+import googleIconImg from '../assets/images/google-icon.svg';
 
 import { Button } from '../components/Button';
 import { useAuth } from '../hooks/useAuth';
@@ -36,7 +36,7 @@ export function Home() {
       alert('Room does not exists.')
       return;
     }
-    
+
     if (roomRef.val().endedAt) {
       alert('Room already closed');
       return;
@@ -60,8 +60,8 @@ export function Home() {
           </button>
           <div className="separator">ou entre em uma sala</div>
           <form onSubmit={handleJoinRoom}>
-            <input 
-              type="text" 
+            <input
+              type="text"
               placeholder="Digite o código da sala"
               onChange={event => setRoomCode(event.target.value)}
               value={roomCode}
